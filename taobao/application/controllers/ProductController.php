@@ -5,12 +5,13 @@ class ProductController extends Zend_Controller_Action
 
     public function init()
     {
-        /* Initialize action controller here */
+        $this->_helper->viewRenderer->setNoRender(true);
     }
 
     public function indexAction()
     {
-        // action body
+        $data = array('id'=>1);
+        Custom_Controller_Plugin_Output::output($data , 1);
     }
 
 
